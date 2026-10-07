@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mısır Cep Rehberi</title>
+<meta name="theme-color" content="#143f4d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏺%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f0;--ink:#14303a;--mut:#4d6870;--card:#fff;--line:#c9d6d3;--gold:#8a5d0a;--teal:#1b7a75;--sea:#d3e6ea;--onteal:#fff;--hero:#143f4d;--heroink:#f3ead4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e2530;--ink:#efe7d2;--mut:#9db5ba;--card:#16384a;--line:#2a5565;--gold:#e0ad4a;--teal:#52c4bb;--sea:#0b2029;--onteal:#06222a;--hero:#0a1c25;--heroink:#f3ead4}}
+:root[data-theme="dark"]{--bg:#0e2530;--ink:#efe7d2;--mut:#9db5ba;--card:#16384a;--line:#2a5565;--gold:#e0ad4a;--teal:#52c4bb;--sea:#0b2029;--onteal:#06222a;--hero:#0a1c25;--heroink:#f3ead4}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.15;margin:0}
+a{color:inherit;text-decoration:none}
+.hero{background:var(--hero);color:var(--heroink);padding:44px 20px 36px}
+.w{max-width:860px;margin:0 auto}
+.hero h1{font-size:clamp(2.4rem,8vw,4rem);font-weight:700}
+.hero p{margin:8px 0 22px;opacity:.85;max-width:52ch}
+.sb{display:flex;gap:8px}
+.sb input{flex:1;font:inherit;padding:14px 16px;border-radius:10px;border:2px solid transparent;background:#fbf6e8;color:#14303a}
+.sb input:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.sb button{font:inherit;padding:0 16px;border-radius:10px;border:1px solid #f3ead444;background:transparent;color:var(--heroink);cursor:pointer}
+.hint{font-size:.9rem;margin-top:10px;opacity:.8}
+.hint a{text-decoration:underline;margin-right:10px}
+main{padding:28px 20px 60px}
+h2{font-size:2rem;margin:36px 0 14px;color:var(--gold)}
+.pop{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.pc{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--teal);border-radius:6px;padding:14px 16px}
+.pc h3{font-size:1.4rem}
+.pc small{color:var(--mut)}
+.pc p{margin:6px 0 0;font-size:.95rem}
+.tl{border-left:3px solid var(--gold);margin-left:8px;padding-left:22px}
+.era{position:relative;padding-bottom:26px}
+.era:before{content:"";position:absolute;left:-31px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--gold)}
+.era time{font-weight:600;color:var(--teal);font-size:.95rem}
+.era h3{font-size:1.5rem}
+.era p{margin:2px 0 8px;color:var(--mut);font-size:.97rem}
+.ch{display:flex;flex-wrap:wrap;gap:6px}
+.ch a{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:3px 12px;font-size:.9rem}
+.ch a:hover{border-color:var(--teal)}
+.city{margin-bottom:14px}.city h3{font-size:1.35rem;margin-bottom:6px}
+.back{display:inline-block;margin:0 0 14px;color:var(--teal);font-weight:600}
+.ent h2{font-size:clamp(2rem,6vw,3rem);margin:0;color:var(--ink)}
+.meta{color:var(--teal);font-weight:600;margin:4px 0 12px}
+.ent .lead{font-size:1.15rem}
+.ent ul{padding-left:20px}.ent li{margin-bottom:6px}
+.tip{background:var(--card);border-left:5px solid var(--gold);padding:12px 16px;border-radius:6px;margin:18px 0}
+.say{font:inherit;padding:8px 16px;border-radius:99px;border:1px solid var(--teal);background:transparent;color:var(--teal);cursor:pointer;margin-bottom:10px}
+.res{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin-bottom:10px;display:block}
+.res b{font-size:1.1rem}.res span{color:var(--mut)}
+footer{color:var(--mut);font-size:.85rem;padding:0 20px 40px;max-width:860px;margin:0 auto}
+@media(prefers-reduced-motion:no-preference){.ent{animation:in .25s ease-out}@keyframes in{from{opacity:0}to{opacity:1}}}
+
+.ch a{min-height:38px;display:inline-flex;align-items:center}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.nav a{border:1px solid #f3ead455;border-radius:99px;padding:7px 14px;min-height:38px}
+.tabs{display:flex;gap:8px;margin-bottom:10px}.tabs button,.zoom,.mapbtn{font:inherit;padding:11px;min-height:44px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.tabs button{flex:1}.tabs button.on{background:var(--teal);color:var(--onteal);border-color:var(--teal)}
+.zoom{margin-top:10px;width:100%;border-color:var(--teal)}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}.offl{color:var(--mut);font-size:.9rem;margin:10px 0 6px}.offb{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:6px 14px;min-height:38px;cursor:pointer}.offb.on{background:var(--teal);color:var(--onteal);border-color:var(--teal)}#mw-ca,#mw-sh{max-width:300px;margin:0 auto}.dir{display:flex;align-items:center;justify-content:center;margin-top:10px;min-height:44px;border-radius:8px;background:var(--teal);color:var(--onteal);font-weight:600;padding:0 14px}.mapbtn{display:inline-flex;align-items:center;border-color:var(--teal);color:var(--teal);font-weight:600}
+svg{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line);touch-action:manipulation}
+svg text{font-size:14px;font-weight:600;fill:var(--ink);paint-order:stroke;stroke:var(--sea);stroke-width:4px;pointer-events:none}
+#m-ca text{stroke:var(--card)}
+svg text.sea{fill:var(--mut);font-weight:400;font-style:italic;stroke:none}
+.pt{cursor:pointer;outline:none}.hit{fill:transparent}.dot{fill:var(--gold);stroke:#fff;stroke-width:3}
+.pt.on .dot{fill:var(--teal);stroke-width:5}.pt:focus-visible .dot{stroke:var(--ink)}
+.tip h3{font-size:1.4rem}.tip p{margin:4px 0 8px}
+.ent p{margin:0 0 12px}
+@media(max-width:480px){body{font-size:16.5px}.hero{padding:32px 16px 28px}main{padding:20px 16px 50px}h2{font-size:1.8rem}}
+
+.fig{margin:0 0 14px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.fig img{width:100%;max-height:340px;object-fit:cover;display:block}.pc{overflow:hidden}
+.kur{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px}
+.krow{display:flex;gap:8px;margin-bottom:10px}
+.krow input,.krow select{font:inherit;font-size:17px;min-height:46px;padding:0 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.krow input{flex:1;min-width:0}
+.kout{font-family:"Cormorant Garamond",Georgia,serif;font-size:2rem;font-weight:700;margin:14px 0 4px;color:var(--gold);overflow-wrap:anywhere}
+.kmeta{color:var(--mut);font-size:.88rem}
+.fig{margin:0 0 14px;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.fig.ld{min-height:170px;background:var(--line);opacity:.5}
+.fig figcaption{font-size:.78rem;color:var(--mut);padding:4px 10px}.fig figcaption a{text-decoration:underline}
+.pc .fig{margin:-14px -16px 10px;border-width:0 0 1px;border-radius:0}.pc .fig.ld{min-height:110px}.pc .fig img{height:110px}
+.famh{font-size:1.4rem;color:var(--gold);margin:22px 0 10px}
+.fd{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:6px;padding:12px 16px;margin-bottom:10px}.fd b{font-size:1.15rem}.fd p{margin:4px 0}.fd small{color:var(--mut);display:block}.fd a{color:var(--teal);font-weight:600;display:inline-block;margin-top:6px}
+.fd .fig{margin:-12px -16px 10px;border-width:0 0 1px;border-radius:0}.fd .fig.ld{min-height:130px}.fd .fig img{height:150px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="w">
+<h1>Mısır Cep Rehberi</h1>
+<p>Kahire, Gize ve Sharm el-Şeyh için tarih, krallar, piramitler ve müzeler. Bir isim yaz, bağlantılı her şeyi gör.</p>
+<div class="sb"><input id="q" type="search" placeholder="Örn: Ramses, piramit, Tutankhamon, Sina…" aria-label="Ara" autocomplete="off"><button id="x" aria-label="Temizle">Temizle</button></div>
+<div class="hint">Deneyin: <a href="#ramses2">Ramses II</a><a href="#giza">Gize</a><a href="#gem">Büyük Mısır Müzesi</a><a href="#sina">Sina Dağı</a></div>
+<nav class="nav"><a href="#zaman">Zaman çizelgesi</a><a href="#harita">Harita</a><a href="#rota">Rota</a><a href="#krallar">Krallar</a><a href="#yemek">Yemek</a><a href="#kur">Kur</a></nav>
+</div></header>
+<main><div class="w" id="app"></div></main>
+<footer>Tarihler yaklaşık ve özet düzeydedir. Müze saatleri, bilet fiyatları ve giriş kuralları sık değişir; gitmeden resmî kaynaktan kontrol et.</footer>
+<script>
+const D=[
+{id:"narmer",t:"Kral",n:"Narmer (Menes)",a:"menes birlesme ilk hanedan firavun",d:"MÖ ~3100",s:"Yukarı ve Aşağı Mısır'ı birleştirip ilk hanedanı kurduğu kabul edilen kral.",f:["Narmer Paleti onu çift tacıyla gösterir; Mısır'ın birleşmesinin en ünlü belgesidir.","Onunla başlayan firavun düzeni yaklaşık 3000 yıl sürdü."],tip:"Tarihin başlangıcı olarak zaman çizelgesinin ilk durağı.",r:["djoser"]},
+{id:"djoser",t:"Kral",n:"Djoser ve Basamaklı Piramit",a:"zoser imhotep basamakli saqqara sakkara",d:"MÖ ~2670",s:"Mimarı İmhotep ile ilk büyük taş yapıyı, Sakkara'daki Basamaklı Piramit'i yaptıran kral.",f:["Yükseklik yaklaşık 62 m; altı basamaklı mastaba üst üste yığılarak oluştu.","Piramit fikri burada doğdu; Gize'dekiler bunun gelişmiş halidir."],tip:"Gize'den önce görürsen piramitlerin evrimini anlarsın.",r:["saqqara","khufu"]},
+{id:"khufu",t:"Kral",n:"Khufu (Keops) ve Büyük Piramit",a:"keops cheops buyuk piramit khafre kefren menkaure mikerinos guneş gemisi",d:"MÖ ~2560",s:"Gize'deki Büyük Piramit'in sahibi. Antik Dünyanın Yedi Harikası'ndan günümüze ulaşan tek yapı.",f:["Orijinal yükseklik yaklaşık 146 m, bugün yaklaşık 138 m; yaklaşık 2,3 milyon blok kullanıldı.","Oğlu Khafre ikinci, torunu Menkaure en küçük piramidi yaptırdı.","Khufu'nun Güneş Gemisi Büyük Mısır Müzesi'nde sergilenir."],tip:"Khafre'nin piramidi tepesindeki kaplama kalıntısıyla daha yüksek görünür; fotoğraf için güzel bir ayrıntı.",r:["giza","sfenks","gem"]},
+{id:"hatshepsut",t:"Kral",n:"Hatşepsut",a:"hatshepsut kadin firavun deir el bahri punt",d:"MÖ ~1479–1458",s:"Yeni Krallık'ın en güçlü kadın firavunu; ticaret seferleriyle ve görkemli tapınağıyla anılır.",f:["Deir el-Bahri'deki teraslı tapınağı Luksor'dadır.","Punt ülkesine gönderdiği ticaret seferi duvar kabartmalarında anlatılır."],tip:"Luksor gün gezisinin parçası.",r:["luxor"]},
+{id:"akhenaten",t:"Kral",n:"Akhenaton ve Nefertiti",a:"akhenaten ehnaton nefertiti amarna aten tek tanri",d:"MÖ ~1353–1336",s:"Çok tanrılı düzeni bırakıp güneş diski Aton'u öne çıkaran, başkenti Amarna'ya taşıyan firavun.",f:["Nefertiti onun eşidir; ünlü büstü Berlin'de sergilenir.","Tutankhamon muhtemelen onun oğludur ve eski dine döndü."],tip:"Amarna sanatı gerçekçi, uzun yüzlü portreleriyle tanınır; müzede bakarken ayırt edebilirsin.",r:["tutankhamun","tanrilar"]},
+{id:"tutankhamun",t:"Kral",n:"Tutankhamon",a:"tutankhamun tutankamon tut howard carter altin maske kv62",d:"MÖ ~1332–1323",s:"9 yaşında tahta çıkan genç firavun. Mezarı neredeyse sağlam bulunduğu için ünlüdür.",f:["Howard Carter mezarı (KV62) 1922'de Krallar Vadisi'nde keşfetti.","Altın maskesi dahil binlerce eserlik hazine, Büyük Mısır Müzesi'nde sergilenir.","Yaklaşık 18-19 yaşında öldü; ölüm nedeni hâlâ tartışmalı."],tip:"GEM'de Tutankhamon galerisine zaman ayır; en kalabalık bölüm burası.",r:["gem","luxor","akhenaten"]},
+{id:"ramses2",t:"Kral",n:"II. Ramses (Büyük Ramses)",a:"ramses ramesses ramses 2 buyuk ramses kadesh kadeş hitit abu simbel nefertari",d:"MÖ ~1279–1213",s:"Yaklaşık 66 yıl hüküm süren, Mısır tarihinin en ünlü firavunlarından biri; dev yapıların kralı.",f:["MÖ ~1274 Kadeş Savaşı: Hititlere karşı; sonucu tartışmalıdır, ama Ramses zaferi duvarlara işletti.","MÖ ~1259: Hitit kralıyla bilinen ilk yazılı barış antlaşması. Kadeş Antlaşması tabletinin bir kopyası İstanbul Arkeoloji Müzeleri'nde.","Abu Simbel tapınaklarını ve eşi Nefertari için küçük tapınağı yaptırdı.","Mumyası Ulusal Mısır Medeniyeti Müzesi'ndeki Kraliyet Mumyaları Salonu'ndadır."],tip:"Luksor'da Karnak ve Ramesseum, Assuan'da Abu Simbel'de izlerini görürsün.",r:["abusimbel","luxor","nmec","giza"]},
+{id:"kleopatra",t:"Kral",n:"VII. Kleopatra ve Ptolemaioslar",a:"cleopatra ptolemaios iskender iskenderiye antonius sezar actium rosetta",d:"MÖ 69–30",s:"Ptolemaios hanedanının son hükümdarı. Mısır'ın bağımsız krallık dönemini kapatan kraliçe.",f:["Büyük İskender MÖ 332'de Mısır'a girdi ve İskenderiye'yi kurdu; sonra generali Ptolemaios hanedan kurdu.","Julius Caesar ve Marcus Antonius ile ittifak yaptı.","MÖ 31 Actium yenilgisi sonrası MÖ 30'da Mısır Roma'ya katıldı."],tip:"Kleopatra Yunanca konuşan Makedon kökenli bir hanedandandı; bu yüzden Yunan-Mısır karışımı sanat görürsün.",r:["hiyeroglif"]},
+{id:"giza",t:"Yapı · Kahire",n:"Gize Piramitleri",a:"giza gize piramit piramitler sfenks kahire panorama",d:"MÖ ~2560–2510",s:"Kahire'nin hemen kenarındaki üç büyük piramit kompleksi; programın olmazsa olmazı.",f:["Üç piramit: Khufu (en büyük), Khafre, Menkaure (en küçük) ve onlarla ilgili küçük kraliçe piramitleri.","Panorama noktasından üçünü birden görüp fotoğraf çekebilirsin."],tip:"Sabah erken git, sıcak ve kalabalık hızla artar. İç girişler ayrı biletlidir; dar koridorlar klostrofobi yapabilir. Şehir merkezinden trafikte 45-60 dk sürebilir.",r:["khufu","sfenks","gem"]},
+{id:"sfenks",t:"Yapı · Kahire",n:"Büyük Sfenks",a:"sphinx sfenks aslan insan basi khafre",d:"MÖ ~2500",s:"Aslan gövdeli, insan başlı dev heykel; yekpare kayadan oyulmuştur.",f:["Yaklaşık 73 m uzunluk, 20 m yükseklik. Çoğu araştırmacı Khafre dönemine bağlar.","Burnunun Napolyon askerlerince kırıldığı söylentisi yanlıştır; daha eski çizimlerde de yoktur."],tip:"Gize'de piramitlerin hemen yanındadır, aynı gezide görülür.",r:["giza","khufu"]},
+{id:"saqqara",t:"Yapı · Kahire",n:"Sakkara ve Dahşur",a:"saqqara sakkara dahshur dahsur kirik piramit kizil sneferu memphis menfis",d:"MÖ ~2670–2600",s:"Gize'den önceki piramit denemelerini gördüğün iki alan: Sakkara ve Dahşur.",f:["Sakkara'da Djoser'in Basamaklı Piramidi bulunur.","Dahşur'da Sneferu'nun Kırık Piramidi ve ilk gerçek düz kenarlı Kızıl Piramidi vardır.","Eski Krallık başkenti Memphis (Menfis) bu bölgededir."],tip:"Kalabalıksız; iç koridorlara girilebilen piramitler daha rahat. Gize'yle aynı gün yarım gün turu yapılır.",r:["djoser","giza"]},
+{id:"gem",t:"Müze · Kahire",n:"Büyük Mısır Müzesi (GEM)",a:"grand egyptian museum buyuk misir muzesi gem tutankhamun guneş gemisi ramses heykeli",d:"2025'te açıldı",s:"Gize Piramitleri'nin hemen yanında, dünyanın tek bir medeniyete ayrılmış en büyük müzelerinden.",f:["Girişte dev II. Ramses heykeli ve Büyük Merdiven'de krallar heykelleri vardır.","Tutankhamon'un tüm hazinesi ve Khufu'nun Güneş Gemisi burada sergilenir."],tip:"Gize'yle aynı güne planlayabilirsin ama en az 3-4 saat ayır. Bileti önceden resmî siteden al.",r:["tutankhamun","ramses2","giza"]},
+{id:"tahrir",t:"Müze · Kahire",n:"Mısır Müzesi (Tahrir)",a:"egyptian museum tahrir meydani eski muze kahire muzesi",d:"1902",s:"Kahire'nin merkezindeki pembe tarihî müze; Mısır arkeolojisinin yüz yıllık evi.",f:["1902'de bugünkü binasında açıldı; yüz binlerce esere ev sahipliği yaptı.","Önemli eserlerin büyük kısmı Büyük Mısır Müzesi'ne taşındı; güncel koleksiyonu için resmî kaynağa bak."],tip:"Tahrir Meydanı'na yakın; müzeden sonra şehir merkezini yürüyebilirsin.",r:["gem","nmec"]},
+{id:"nmec",t:"Müze · Kahire",n:"Ulusal Mısır Medeniyeti Müzesi",a:"nmec fustat kraliyet mumyalari ramses mumya",d:"Fustat, Kahire",s:"Fustat'ta Mısır'ın tüm tarihini anlatan müze; Kraliyet Mumyaları Salonu ile ünlüdür.",f:["Mumyalar 2021'de Tahrir'den buraya törenle taşındı.","II. Ramses, Hatşepsut gibi ünlü firavun mumyalarını burada görebilirsin."],tip:"Eski Kahire (Kıpti bölgesi) ile aynı gün gezilebilir.",r:["ramses2","mumya"]},
+{id:"kale",t:"Yer · Kahire",n:"Selahaddin Kalesi ve Muhammed Ali Camii",a:"cairo citadel kahire kalesi muhammed ali camii alabaster selahattin",d:"1176; cami 1830–1848",s:"Kahire'ye yukarıdan bakan kale; içindeki Muhammed Ali Camii İstanbul camilerini andırır.",f:["Selahaddin Eyyubi, Haçlılara karşı koruma amacıyla yaptırdı.","Muhammed Ali Paşa camisi Osmanlı üslubunda inşa edildi."],tip:"Camiye girişte örtünme kuralı vardır; omuz ve diz kapalı olsun.",r:["islami","osmanli"]},
+{id:"islami",t:"Yer · Kahire",n:"İslami Kahire (Han el-Halili, El-Ezher)",a:"han el halili carsi el ezher muizz sokagi fatimi islami kahire",d:"969'dan",s:"Fatımilerin 969'da kurduğu Kahire'nin eski çekirdeği; çarşı, cami ve tarihî sokaklar.",f:["El-Ezher Camii 970'te yapıldı; dünyanın en eski üniversitelerinden birine dönüştü.","El-Muizz Caddesi'nde Memlük ve Fatımi anıtları yan yana durur."],tip:"Han el-Halili'de pazarlık yapılır; akşam saatleri en canlı zamandır.",r:["kale","osmanli"]},
+{id:"osmanli",t:"Olay",n:"Osmanlı Dönemi (1517–1914)",a:"yavuz sultan selim 1517 ridaniye memluk osmanli misir kavalali muhammed ali suveys",d:"1517",s:"Yavuz Sultan Selim 1517'de Ridaniye Savaşı'yla Memlükleri yenip Mısır'ı Osmanlı'ya kattı.",f:["Kavalalı Mehmed Ali Paşa 1805'ten sonra Mısır'ı fiilen özerk yönetti.","Süveyş Kanalı 1869'da açıldı."],tip:"İslami Kahire'de Osmanlı izlerini çok görürsün; Türkçe tabelalar ve mimari ayrıntılar bile var.",r:["kale","islami"]},
+{id:"luxor",t:"Yer · Gün gezisi",n:"Luksor (Karnak, Krallar Vadisi)",a:"luxor luksor karnak krallar vadisi tebai tebes theb",d:"Yeni Krallık",s:"Eski Tebai; Yeni Krallık'ın başkenti. Dünyanın en büyük açık hava müzesi sayılır.",f:["Karnak ve Luksor Tapınakları Nil'in doğu yakasında, Krallar Vadisi ve Hatşepsut Tapınağı batı yakasındadır.","Tutankhamon'un mezarı Krallar Vadisi'ndedir."],tip:"Kahire'den uçakla yaklaşık 1 saat; günübirlik tur olur, ama bir gece kalmak rahattır.",r:["hatshepsut","tutankhamun","ramses2"]},
+{id:"abusimbel",t:"Yer · Gün gezisi",n:"Abu Simbel",a:"abu simbel assuan aswan ramses nefertari tapinak",d:"MÖ ~1264",s:"II. Ramses'in dört dev heykelle korunan kaya tapınağı.",f:["1960'larda Aswan Barajı gölü yüzünden yerinden kesilip taşındı.","Yılda iki kez güneş ışığı en iç odadaki heykellere ulaşır."],tip:"Assuan'a uzak olduğundan Kahire'den günübirlik uçak turlarıyla ya da Assuan'dan sabah erken yola çıkarak gidilir.",r:["ramses2","luxor"]},
+{id:"sharm",t:"Yer · Sharm",n:"Sharm el-Şeyh ve Kızıldeniz",a:"sharm el sheikh seyh naama bay kizildeniz dalis snorkel mercan",d:"Sina Yarımadası",s:"Sina'nın güney ucunda mercan kayalıklarıyla ünlü tatil ve dalış merkezi.",f:["Dünyanın en iyi dalış ve şnorkel noktalarından biri olarak bilinir.","Naama Bay gece hayatı, Eski Çarşı (Old Market) yerel alışveriş için uygundur."],tip:"Mercanlara dokunma, mercan dostu güneş kremi kullan.",r:["oldmarket","sahaba","soho","sharks","rasumsid","tiran","ras","sina"]},
+{id:"ras",t:"Yer · Sharm",n:"Ras Muhammed Milli Parkı",a:"ras mohammed mercan milli park dalis",d:"Park: 1983",s:"Sharm'ın hemen güneyindeki koruma alanı; mercanlar ve tropik balıklar için en iyi nokta.",f:["Sina'nın güney burnunda, Süveyş ve Akabe körfezlerinin buluştuğu yerdedir.","Mangrov ağaçları ve renkli sığ resifleri vardır."],tip:"Giriş ücretlidir ve pasaport gerekebilir; sabah erken gidilir.",r:["sharm"]},
+{id:"sina",t:"Yer · Sharm",n:"Sina Dağı ve Aziz Katerina Manastırı",a:"sinai musa dagi katerina manastir yanan calı yanan çalı gun dogumu",d:"6. yy (manastır)",s:"Geleneğe göre Musa'nın On Emir'i aldığı dağ ve dünyanın en eski işlevini sürdüren manastırlarından biri.",f:["Aziz Katerina Manastırı İmparator Justinianus tarafından 6. yüzyılda yaptırıldı; UNESCO Dünya Mirası'dır.","Gün doğumu tırmanışı gece başlar; yaklaşık 2-3 saat sürer."],tip:"Sharm'dan yaklaşık 2,5-3 saat; gece yola çıkıp gün doğumu için organize turlarla gidilir. Sıcak giysi al; dağda gece soğuktur.",r:["sharm"]},
+{id:"oldmarket",t:"Yer · Sharm",n:"Eski Çarşı (Old Market)",a:"old market souk sharm eski carsi pazar alisveris hadaba",d:"Hadaba yakını",s:"Sharm'ın en canlı yerel çarşısı; baharat, el işi, tekstil ve hediyelik eşya satan dükkânlar ve kafeler.",f:["Sharm'ın güney ucundaki Hadaba otel bölgesine kısa bir taksi mesafesindedir.","Merkezinde Sahaba Camii yükselir.","Adının aksine eski değil, turistler için düzenlenmiş yeni bir çarşıdır."],tip:"Akşam daha canlıdır. Pazarlığa ilk fiyatın çok altından başla; sabit fiyatlı dükkânlarda pazarlık yapma.",r:["sahaba","sharm"]},
+{id:"sahaba",t:"Cami · Sharm",n:"Sahaba Camii",a:"sahaba al sahaba mosque cami minare old market",d:"2017",s:"Eski Çarşı'nın merkezindeki dev cami; iki minaresi yaklaşık 76 m yüksekliğindedir.",f:["Yapı 2017'de tamamlandı; mimarisinde Osmanlı ve Fatımi etkileri anılır.","Gün batımında ışıkta ve akşamları spot ışıklarıyla çok etkileyici görünür."],tip:"İçeri girmek için omuz ve dizleri kapat, ayakkabıları çıkar. Ramazan ve namaz saatlerinde giriş kısıtlı olabilir; dışarıdan da görülür.",r:["oldmarket","islami"]},
+{id:"soho",t:"Yer · Sharm",n:"Soho Square",a:"soho meydan eglence restoran alisveris",d:"Sharm merkezi",s:"Restoran, kafe ve dükkânların toplandığı modern açık hava eğlence ve alışveriş meydanı.",f:["Akşam yemeği ve eğlence için tercih edilir.","Eski Çarşı'ya göre daha modern ve düzenli bir ortam sunar."],tip:"Eski Çarşı ile aynı akşam karşılaştırmalı gezmek keyifli olur.",r:["sharm","sharks","oldmarket"]},
+{id:"sharks",t:"Yer · Sharm",n:"Shark's Bay",a:"sharks bay kopek baligi koyu sahil snorkel resif",d:"Naama Bay'in kuzeyi",s:"Sharm'ın kuzeyindeki körfez; kıyıya yakın resifi ve otelleriyle bilinir.",f:["Şnorkel için kıyıdan girilebilen resiflere sahiptir.","Naama Bay'e göre daha sakin bir sahil atmosferi sunar."],tip:"Resife girerken ayak sandaleti ve can yeleği kullan, mercana basma.",r:["sharm","soho"]},
+{id:"rasumsid",t:"Yer · Sharm",n:"Ras Um Sid",a:"ras um sid fener deniz feneri kayalik resif dalis",d:"Eski Sharm kıyısı",s:"Eski Sharm kıyısında deniz fenerinin bulunduğu kayalık burun; manzarası ve resifleriyle bilinir.",f:["Fener çevresinden kıyıya iner ve resife girilir.","Eski Çarşı ile aynı güzergâha kısa bir manzara molası olarak eklenebilir."],tip:"Kayalık zeminde ayak sandaleti şart; dalgalı günlerde suya girme.",r:["oldmarket","sharm"]},
+{id:"tiran",t:"Yer · Sharm",n:"Tiran Adası ve resifleri",a:"tiran ada tekne turu jackson woodhouse thomas gordon snorkel dalis bogaz",d:"Tiran Boğazı",s:"Sharm'dan tekne turlarıyla gidilen Tiran Boğazı'ndaki ada ve mercan resifleri.",f:["Jackson, Woodhouse, Thomas ve Gordon resifleri en bilinen noktalardır.","Tur genelde yarım ya da tam gün sürer; resiflerde şnorkel molası verilir."],tip:"Tekne turunu güvenilir bir acentadan, yorumlara bakarak seç.",r:["sharm","ras"]},
+{id:"tanrilar",t:"Kavram",n:"Mısır Tanrıları",a:"ra amun osiris isis horus anubis thoth hathor tanri tanrilar",d:"Tüm dönemler",s:"Müzede gördüğün kabartma ve heykellerin kimlik kartı.",f:["Ra güneş tanrısıdır; Osiris ölüm ve yeniden doğuş; İsis büyü ve annelik.","Horus şahin başlı gök tanrısıdır, firavunun koruyucusudur; Anubis çakal başlı mumyalama tanrısı.","Hathor sevgi, müzik ve doğum tanrıçası; Thoth yazı ve bilgelik tanrısı."],tip:"Başlarına bakarak tanırsın: şahin = Horus, çakal = Anubis, ibis = Thoth.",r:["mumya","akhenaten"]},
+{id:"mumya",t:"Kavram",n:"Mumyalama",a:"mumya mumyalama kanopik canopic olum ahiret",d:"Tüm dönemler",s:"Bedeni ahiret için korumak amacıyla uygulanan, yaklaşık 70 gün süren işlem.",f:["Organlar çıkarılıp kanopik kavanozlara konur; beden natron tuzuyla kurutulur.","Kalp yerinde bırakılırdı; çünkü ahirette tartılacağına inanılırdı."],tip:"Kraliyet Mumyaları Salonu'nda fotoğraf çekmek yasak olabilir.",r:["nmec","tanrilar"]},
+{id:"hiyeroglif",t:"Kavram",n:"Hiyeroglif ve Rosetta Taşı",a:"hieroglyph rosetta tasi champollion yazi",d:"1799 / 1822",s:"Mısır yazısı, binlerce yıl okunamadıktan sonra Rosetta Taşı sayesinde çözüldü.",f:["Rosetta Taşı 1799'da Napolyon'un seferi sırasında bulundu.","Champollion 1822'de hiyerogliflerin çözümünü açıkladı.","Taş bugün Londra'da British Museum'dadır, Mısır'da değil."],tip:"Kartuş (oval çerçeve içindeki yazı) bir kralın adını gösterir.",r:["kleopatra","ramses2"]}
+];
+const E=[
+["Erken Hanedan","MÖ ~3100–2686","Mısır birleşir, yazı ve devlet kurulur.",["narmer"]],
+["Eski Krallık: Piramitler Çağı","MÖ 2686–2181","İlk taş yapı, ardından Gize'nin dev piramitleri.",["djoser","saqqara","khufu","giza","sfenks"]],
+["Orta Krallık","MÖ 2055–1650","Yeniden birleşme; sanat ve edebiyatın altın çağı.",[]],
+["Yeni Krallık: İmparatorluk","MÖ 1550–1069","Hatşepsut, Akhenaton, Tutankhamon ve Ramses'in dönemi.",["hatshepsut","akhenaten","tutankhamun","ramses2","luxor","abusimbel"]],
+["Ptolemaios Dönemi","MÖ 332–30","İskender, İskenderiye ve Kleopatra.",["kleopatra","hiyeroglif"]],
+["Roma ve Bizans","MÖ 30 – MS 641","Hristiyanlık yayılır; Sina'da manastırlar kurulur.",["sina"]],
+["İslami Dönem","641–1517","Fatımiler Kahire'yi kurar (969); Selahaddin Kalesi.",["islami","kale"]],
+["Osmanlı ve Modern Mısır","1517 – günümüz","Ridaniye, Mehmed Ali Paşa, Süveyş Kanalı, Tutankhamon'un keşfi (1922).",["osmanli","tahrir","nmec","gem"]]
+];
+const $=id=>document.getElementById(id),app=$("app"),q=$("q");
+const by=Object.fromEntries(D.map(e=>[e.id,e]));
+const nz=s=>s.toLocaleLowerCase("tr").replace(/ı/g,"i").normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+const chip=id=>by[id]?`<a href="#${id}">${by[id].n}</a>`:"";
+const G={
+narmer:"Mısır'ın birleşmesi bir gecede olmadı; öncesinde Nil boyunca yerel krallıklar vardı. Narmer Paleti'nin bir yüzünde kral Yukarı Mısır'ın beyaz tacıyla, öbür yüzünde Aşağı Mısır'ın kırmızı tacıyla görünür; bu, iki ülkenin birleşmesinin simgesi olarak okunur. Bazı araştırmacılar Narmer ile geleneksel Menes adının aynı kişi olduğunu düşünür, bazıları Menes'in halefi Aha olabileceğini söyler. Kesin bilinmiyor.",
+djoser:"Djoser'den önce krallar kerpiç mastabalara gömülürdü. Baş vezir ve mimar İmhotep, mastabanın üstüne daha küçük mastabalar eklemeyi önerdi ve Basamaklı Piramit ortaya çıktı. Çevresinde taştan avlular, tapınaklar ve sahte kapılardan oluşan koca bir tören kompleksi var. İmhotep sonraki yüzyıllarda tıp ve bilgelikle anılan, hatta tanrı gibi saygı gören bir figüre dönüştü.",
+khufu:"Büyük Piramit yaklaşık 20 yılda tamamlandı. Taşların çoğu yakın ocaklardan, ince kaplama taşları Nil'in karşı yakasındaki Tura'dan, granit bloklar Assuan'dan getirildi. Efsanelerin aksine, piramidi köleler değil beslenen ve barındırılan işçiler yaptı; işçi kasabasının kalıntıları piramidin güneyinde bulundu. Parlak dış kaplamanın büyük kısmı Orta Çağ'da Kahire'deki yapılar için sökülüp kullanıldı.",
+hatshepsut:"Hatşepsut önce kocası II. Thutmose'un, sonra üvey oğlu III. Thutmose'un naibi oldu; birkaç yıl sonra kendini tam firavun ilan etti ve resimlerde sakallı, erkek firavun kıyafetiyle gösterildi. Saltanatı savaştan çok ticaret ve anıt yapımıyla geçti. Ölümünden sonra bazı heykellerinin ve adının anıtlardan silindiği görülür; bunu çoğunlukla III. Thutmose'a bağlarlar, ama nedeni ve zamanı tartışmalıdır.",
+akhenaten:"IV. Amenhotep adıyla tahta çıkan kral, birkaç yıl sonra adını Akhenaton (Aton'a yararlı) yaptı ve başkenti daha önce hiç yerleşim olmayan Amarna'ya taşıdı. Aton tapınakları kapalı değil, güneş ışığına açık avlulardı. Ölümünden sonra halefleri Amarna'yı terk etti, eski tanrılar geri döndü ve Akhenaton'un adı resmî kral listelerinden çıkarıldı.",
+tutankhamun:"Tutankhamon tarih açısından küçük bir kraldı; ünü mezarının ayakta kalmasından gelir. Mezar soygunculara karşı kısmen zarar görmüştü, ama bir kral mezarı için görülmemiş ölçüde eksiksizdi. Carter ve ekibinin içindeki binlerce eseri kayda geçirmesi yaklaşık on yıl aldı. Altın maske, tabutlar ve takılar, firavun mezarlarının zenginliğine dair en iyi fikri verir.",
+ramses2:"Ramses saltanatının büyük kısmını inşaata ayırdı: Luksor, Karnak, Ramesseum, Abu Simbel ve kendi adını taşıyan başkenti Pi-Ramesses. Yaklaşık 90 yıl yaşadığı ve çok sayıda çocuğu olduğu anlatılır. O kadar etkili oldu ki sonraki dokuz firavun da Ramses adını aldı. Başka firavunların anıtlarına kendi adını yazdırmasıyla da bilinir; bu yüzden müzede adını sık göreceksin.",
+kleopatra:"Kleopatra, hanedanının Mısır dilini öğrenen ilk üyelerinden biri olarak anlatılır (Plutarkhos'a göre). Roma'nın Mısır'ı yutmasını önlemek için önce Caesar, sonra Antonius ile ittifak kurdu. Actium yenilgisinden sonra ikisinin de intihar ettiği anlatılır; Octavianus (sonraki Augustus) Mısır'ı Roma eyaleti yaptı. Kleopatra'nın İskenderiye'deki sarayı bugün büyük oranda deniz altında ya da modern şehrin altındadır.",
+giza:"Gize platosu bir mezarlıktır: üç büyük piramidin yanında kraliçe piramitleri, mastabalar, kral akrabalarının ve yüksek memurların mezarları vardır. Her piramit bir vadi tapınağına ve kaldırım yoluyla bir ölü tapınağına bağlıydı. Mısırlılar kralın öldükten sonra göğe yükselip güneşle yolculuk edeceğine inandığı için piramitler güneşin gökteki ışınlarını andıran bir biçimde düşünüldü.",
+sfenks:"Sfenks'in ön pençeleri arasında IV. Thutmose zamanından kalma Rüya Steli durur. Stelde, genç prens Thutmose'un Sfenks'in kumlara gömülü hâlini rüyada gördüğü ve onu açarsa kral olacağına dair söz aldığı anlatılır. Bu, heykelin yüzyıllarca kum altında kaldığını gösterir. Bugün aşınmış olan yüz, bir zamanlar boyalıydı.",
+saqqara:"Sakkara, Memphis'in mezarlığıydı ve 3000 yıldan fazla kullanıldı. Unas Piramidi'nin iç duvarlarında bilinen ilk Piramit Metinleri bulunur. Dahşur'daki Kırık Piramit, eğimin yarıda değişmesiyle tanınır; mimarlar yapısal sorun fark edince açıyı azaltmış gibi görünüyor. Bir sonraki Kızıl Piramit ilk gerçek düz kenarlı piramittir.",
+gem:"Müze piramitlere bakacak biçimde tasarlandı; büyük pencerelerden platoyu görürsün. Koleksiyonun çok büyük bir bölümü sergide ve Tutankhamon galerisi, mezar eşyasının tamamını ilk kez bir arada sunar. Müzenin yapımı ve eserlerin taşınması uzun yıllar sürdü.",
+tahrir:"Müze, Fransız mimar Marcel Dourgnon'un tasarladığı neoklasik bir yapıdır ve 1902'den beri aynı binada durur. Yıllarca yoğun ve kalabalık sergilenmiş eserleriyle tanınırdı. Eserlerin önemli kısmı Büyük Mısır Müzesi'ne gittiği için güncel koleksiyonu gitmeden resmî kaynaktan kontrol et.",
+nmec:"Fustat, Arapların 641'den sonra kurduğu ilk başkenttir; yakınında Kıpti Kahire ve Amr ibn el-As Camii vardır. Müze Mısır'ın tarihöncesinden günümüze kadar uzanan hikâyesini anlatır. 2021'de 22 kraliyet mumyası Tahrir'den buraya, Firavunların Altın Geçidi adı verilen büyük bir törenle taşındı.",
+kale:"Selahaddin Eyyubi kalenin yapımına Kahire'yi Haçlılara karşı savunmak için 1176'da başladı; yüzyıllarca Mısır yöneticilerinin merkezi oldu. Muhammed Ali Camii, alabastr kaplı duvarları ve kalenin üstünden Kahire'ye, gün batımında Gize yönüne bakan manzarasıyla meşhurdur. Kale içinde başka müzeler de vardır.",
+islami:"El-Muizz Caddesi çevresi Fatımi ve Memlük dönemlerinin açık hava müzesi gibidir; El-Hakim Camii, Kalavun Külliyesi, Bab Zuweyla ve Bab el-Futuh gibi yapıları yürüyerek gezebilirsin. Han el-Halili 14. yüzyılın sonundan beri çarşı olarak işler: baharat, bakır, kuyumcu ve hediyelik eşya satılır. Fishawi kahvesi çay ve nargile için ünlüdür.",
+osmanli:"1517'de Yavuz Sultan Selim Memlük Sultanı Tomanbay'ı yendi; Tomanbay'ın sonradan Bab Zuweyla'da idam edildiği anlatılır. Mısır, Osmanlı için en zengin eyaletlerden biri oldu. Kavalalı Mehmed Ali Paşa 1805'te vali oldu ve modern Mısır devletinin kurucusu sayılır; Kahire Kalesi'ndeki cami onun eseridir.",
+luxor:"Antik adı Waset, Yunanca Tebai. Nil'in doğu yakası yaşayanlara (tapınaklar, şehir), batı yakası ölülere (mezarlar, ölü tapınakları) ayrılmıştı. Karnak, yüzyıllar boyunca birçok firavunun eklediği dev bir tapınak kompleksidir; Hipostil Salonu'nda 134 dev sütun vardır. Gün batımında Nil'de yelkenli felucca teknesiyle gezi yapılır.",
+abusimbel:"Büyük Tapınak'ın cephesinde yaklaşık 20 m yüksekliğinde dört oturan Ramses heykeli, yanındaki küçük tapınakta ise Nefertari ve tanrıça Hathor vardır. 1964-68 arasında UNESCO koordinasyonuyla tapınaklar parça parça kesilip yüksek bir noktaya taşındı. Yılda iki gün (22 Şubat ve 22 Ekim civarı) gün ışığı en iç odaya girer.",
+sharm:"Sharm el-Şeyh 1980'lerden itibaren bir balıkçı köyünden tatil kentine dönüştü. Kızıldeniz'in berrak suyu ve dik mercan resifleri dünyaca ünlüdür. Şnorkel için Naama Bay, Ras Muhammed ve Tiran Adası çevresindeki noktalar popülerdir.",
+ras:"Park 1983'te kuruldu ve Mısır'ın ilk milli parkıdır. Resiflerde çok sayıda mercan ve balık türü yaşar; Shark ve Yolanda resifleri ünlü dalış noktalarıdır. Rüzgâra ve akıntıya göre bazı noktalar kapalı olabilir; tur firmasına sor.",
+sina:"Zirve yaklaşık 2285 m yüksekliktedir ve Yahudilik, Hristiyanlık ve İslam'da önemli yer tutar. Manastırda dünyanın en eski kesintisiz çalışan kütüphanelerinden biri vardır; Codex Sinaiticus bu manastırda bulundu ve manastırda Yanan Çalı olduğu söylenen bir bitki gösterilir. Zirveye 3750 basamaklı Tövbe Yolu ile ya da daha uzun, daha yumuşak eğimli yoldan çıkılır.",
+oldmarket:"Eski Çarşı, Sharm'ın güneyindeki Hadaba bölgesine yakın bir pazardır. Baharat, hediyelik eşya, tekstil ve el işleri satılır; çevrede restoranlar, nargile kafeler ve tatlıcılar bulunur. Pazarlık kültürü güçlüdür; kararsızsan nazikçe teşekkür edip ilerlemek yeterli.",
+sahaba:"Cami, Eski Çarşı'nın tam merkezinde yer alır ve geceleri aydınlatılır. Önündeki meydan geniştir; hem fotoğraf hem de çarşıya girmeden önce buluşma noktası olarak kullanılır. Kıyafet kuralı vardır ve Ramazan'da içeri girişin kısıtlı olabileceği turlarca belirtiliyor.",
+soho:"Soho Square, Sharm'ın daha modern bir eğlence alanıdır; açık hava restoranları, kafeler ve dükkânlar bir arada bulunur. Eski Çarşı'ya kıyasla daha düzenli bir hava sunar, bu yüzden aynı akşam ikisini karşılaştırmak keyiflidir.",
+sharks:"Shark's Bay, kıyıya yakın resifi ve otel odaklı yapısıyla bilinir. Suya girmeden önce resife giriş noktalarını ve akıntı durumunu otel veya dalış merkezinden öğren.",
+rasumsid:"Ras Um Sid, Sharm'ın eski bölgesinde kayalık bir burundur; deniz feneri çevresinde kıyı yürüyüşü ve resif girişi için kullanılır. Eski Çarşı ile aynı güzergâhta kısa bir uğrak olarak planlanabilir.",
+tiran:"Tiran Boğazı, Kızıldeniz ile Akabe Körfezi arasındaki dar geçittir ve mercan resifleriyle ünlüdür. Tekne turları genellikle resifler arasında birkaç durak yapar; rüzgâr ve akıntıya göre rota gün içinde değişebilir. Deniz tutması olanlar önceden önlem almalı.",
+tanrilar:"Mısırlılar için tanrılar doğa güçleriydi. Aynı tanrıyı farklı kentlerde başka adlarla ve birleşik biçimlerde görmek normaldir (Amun-Ra gibi). Tanrıların taçları ve elindeki semboller kimlik ipucudur: Ankh yaşamı, Was asası gücü simgeler.",
+mumya:"Beyin burundan kancayla çıkarılıp atılır; karaciğer, akciğer, mide ve bağırsaklar kanopik kavanozlara konurdu. Beden yaklaşık 40 gün natronda kurutulur, sonra keten bandajlarla sarılırdı; toplam süre yaklaşık 70 gündü. Kedi, ibis ve timsah gibi hayvanlar da tanrılara adak olarak mumyalanırdı.",
+hiyeroglif:"Rosetta Taşı aynı metni hiyeroglif, Demotik ve Yunanca olmak üzere üç yazıyla verdiği için çözümün anahtarı oldu. Hiyeroglifler hem ses hem anlam gösterir; okuma yönü hayvan ve insan figürlerinin baktığı yöne doğrudur. Champollion, Kleopatra'nın adının kartuş içinde yazıldığı bir obeliskten de yararlandı."
+};
+const H={
+narmer:"Narmer Paleti törensel bir makyaj paletidir ve iki yüzü de kabartmalıdır; bir yüzünde kral eline aldığı düşmanı ezerken gösterilir. Bu sahne kalıbı sonraki yaklaşık bin yıl boyunca firavun sanatında tekrarlandı. Müzede bir kralı güçlü gösteren her sahnede bu eski kalıbın izini aramak keyifli bir oyundur.",
+djoser:"Basamaklı Piramit'in altında yaklaşık 6 km uzunluğunda tüneller ve odalar vardır; ana mezar odası yaklaşık 28 m derinliktedir. Girişteki sütunlu koridor ve kral için yapılmış Sed Festivali avluları, kralın ahirette de krallık görevlerini sürdürmesi için tasarlanmıştı. Kompleksi gezerken önce koridoru, sonra büyük avluyu görmek yapıyı anlamayı kolaylaştırır.",
+khufu:"İç girişle Büyük Galeri'ye ve Kral Odası'na çıkılır; odada boş bir granit lahit durur. Piramidin köşeleri dört ana yöne şaşırtıcı bir doğrulukla hizalanmıştır. Yakında kraliçe piramitleri ve gemi çukurları vardır; gemilerden biri GEM'de sergilendiği için ikisini aynı güne koymak mantıklıdır.",
+hatshepsut:"Deir el-Bahri'deki tapınak, kayalık yamacın önüne oturan üç teraslı zarif bir yapıdır. Duvar kabartmaları Punt seferini ve kraliçenin ilahi doğum hikâyesini anlatır. Açık alan olduğu için yazın en sıcak saatlerde çok yorucudur; sabah erken gitmek en iyisi.",
+akhenaten:"Amarna'da bulunan Amarna Mektupları, Mısır'ın Hitit, Babil ve Mitanni gibi güçlerle yazışmasını gösteren çivi yazılı tabletlerdir ve eski Yakın Doğu diplomasisinin en değerli belgeleri arasındadır. Nefertiti'nin ünlü büstü Kahire'de değil Berlin'dedir. Amarna sanatının uzun yüzlü, hafif abartılı üslubu, müzede kolayca ayırt edilir.",
+tutankhamun:"Mezarda altının yanında günlük eşyalar da vardı: sandalyeler, yataklar, oyun tahtası ve hançerler. Bir hançerin gökten düşen meteorik demirden yapıldığı yapılan analizlerle ileri sürüldü. Altın maske katı altındandır ve yaklaşık 10 kg gelir; Firavunun laneti hikâyeleri ise sonradan basında şişirilmiş efsanelerdir.",
+ramses2:"Ramesseum, Ramses'in Luksor'daki ölü tapınağıdır; yıkılmış dev heykeli Shelley'in Ozymandias şiirine ilham verdi. Abu Simbel duvarlarında Kadeş Savaşı sahneleri işlenmiştir. Hitit kralı III. Hattusili ile yapılan antlaşma, Anadolu tarihiyle de doğrudan bağ kurar; bu yüzden Türkiye'den gelen bir gezgin için ayrıca anlamlıdır.",
+kleopatra:"Kleopatra döneminin İskenderiye'si Akdeniz'in en büyük kültür merkeziydi; Pharos Feneri ve ünlü Kütüphane oradaydı. Bugünkü Bibliotheca Alexandrina bu mirası anan modern bir yapı olarak 2002'de açıldı. Luksor yakınındaki Dendera Tapınağı'nın arka duvarında Kleopatra ve oğlu Sezaryon'un kabartması vardır.",
+giza:"Platoda üç piramidin yanı sıra Khufu'nun güneyindeki gemi çukurları, mastaba mezarlıkları ve işçi kasabası kalıntıları vardır. Panorama noktası üç piramidi bir arada görüp fotoğraflamak için en iyi yerdir. Girişte satıcılar ve at/deve teklifleri çok olur; kararlı bir hayır yeterlidir, ücreti önceden öğren.",
+sfenks:"Sfenks'in önünde Khafre'nin vadi tapınağı durur; dev kireçtaşı blokları arada harç olmadan yerleştirilmiştir. Gövde, farklı sertlikte kireçtaşı katmanlarından oyulduğu için hava koşullarıyla düzensiz aşınır ve sürekli restore edilir. Yakından ziyaret çoğu zaman bir mesafeden yapılır; en iyi fotoğraf açısı için sabah erken gün ışığını kullan.",
+saqqara:"İmhotep'in tasarladığı kompleksin sütunlu giriş koridorunu ve büyük avluyu gez; yakındaki mastabalarda canlı renkli kabartmalar vardır. Dahşur'da Kızıl Piramit'in içine girilebilir: dik ve alçak bir merdivenle inilir, dar alan sevmiyorsan bunu bil.",
+gem:"Girişteki Büyük Merdiven, iki yanındaki kral heykelleriyle kronolojik bir yürüyüş gibi okunur. İçeriden Gize'ye bakan cam duvar, piramitleri bir müze eseri gibi çerçeveler. Tek günde bitirmek zor; önce Tutankhamon galerisi ve Büyük Merdiven'i gör, zaman kalırsa diğer galerilere geç.",
+tahrir:"Bahçede Mısır arkeolojisinin kurucularından Auguste Mariette'in mezarı ve heykeller bulunur. Tahrir Meydanı ve Nil kıyısına yakın olduğu için müzeden sonra Nil boyunca yürüyüş yapabilirsin. İçeride kalabalık ve eser yoğunluğu fazla olabilir; önceliklerini belirle.",
+nmec:"Kraliyet Mumyaları Salonu loş ve sessizdir; kalabalıktan uzak, daha düşünceli bir ziyaret sunar. Yakında Kıpti Kahire vardır: Asılı Kilise, Ben Ezra Sinagogu ve Amr ibn el-As Camii üç inancı birkaç yüz metre içinde yan yana gösterir. Aynı gün için çok uygun bir ikili.",
+kale:"Kale içinde Muhammed Ali Camii, Nasır Muhammed Camii ve Askerî Müze önemli duraklardır; bilet tek kapıdan alınır. Kalenin hemen karşısındaki Sultan Hasan Camii, Kahire'nin en etkileyici Memlük yapılarından biridir ve aynı güzergâhta gezilebilir.",
+islami:"Han el-Halili'de önce fiyat sor, pazarlık yap ve birkaç dükkânı karşılaştır. Akşam saatlerinde El-Muizz Caddesi ışıklandırılır ve yürüyüş için çok keyifli olur. Namaz saatlerinde camilerde ziyaret kısıtlı olabilir; örtünme kurallarına uy.",
+osmanli:"Kahire'de Osmanlı izleri çoktur: Kale'deki Süleyman Paşa Camii (1528), Bulak'taki Sinan Paşa Camii (1571) ve Osmanlı tarzı sebiller. Mısır Arapçasında Türkçeden geçmiş birçok sözcük vardır; bahşiş ve efendi gibi sözcükleri duyabilirsin.",
+luxor:"Luksor Tapınağı geceleri ışıklandırılır; Karnak'ı Luksor'a bağlayan Sfenksler Yolu restore edilmiştir. Krallar Vadisi'nde tek bilet birkaç mezara girişi kapsar; Tutankhamon gibi bazı mezarlar ayrı bilet gerektirir. Batı yakasını sabah, doğu yakasını gün batımında görmek ışık ve sıcak için iyi bir sıradır.",
+abusimbel:"Tapınaklar, Nasır Gölü'nün yükselen suyundan kurtarılmak için yaklaşık 65 m yukarı ve 200 m geriye taşındı. Yaklaşık bin blok halinde kesilip yeniden kurulmaları, 20. yüzyılın en büyük uluslararası kurtarma kampanyalarından biriydi. Uçak turuyla gidiyorsan iniş saatlerine göre sınırlı süre kalır.",
+sharm:"Şnorkel için en güvenli başlangıç rehberli tekne turlarıdır; resifte akıntı ve derinlik değişimi hızlı olabilir. Mercana basmak ya da dokunmak hem resife zarar verir hem de kesikleri yavaş iyileşir. Güneşten korunmak için güneş koruyucu tişört ve mercan dostu krem iyi bir tercih.",
+ras:"Giriş kapısında pasaport ve bilet kontrolü olabilir; parkta Mercan Kıyısı ve Mangrov gibi noktalar vardır. Dalış alanlarına mutlaka deneyimli rehberle gir. Yanına bol su ve şapka almayı unutma; park içinde imkânlar sınırlıdır.",
+sina:"Gün doğumu tırmanışı için gece 1-2 civarı başlanır; yolda çay dükkânları bulunur. Zirvede çok soğuk olabilir, mont, el feneri ve sağlam ayakkabı al. Manastırın ziyaret saatleri sınırlıdır ve bazı günler kapalı olabilir; tur firmasına sor.",
+tanrilar:"Gezide en çok göreceğin tanrılar: Horus (Edfu'da büyük tapınağı var), Anubis ve Hathor (Dendera'da tapınağı var). Renkler de anlam taşır: yeşil yeniden doğuş ve bereketi, siyah verimli Nil çamurunu ve ölüler dünyasını simgeler.",
+mumya:"Mumyalama yalnızca krallara özel değildi; zengin ve orta halli kişiler de mumyalanırdı. Kraliyet mumyaları üzerinde yapılan röntgen ve CT çalışmaları yaşları, hastalıkları ve olası ölüm nedenleri hakkında ipuçları verdi.",
+hiyeroglif:"Müzede kartuş arayarak okumaya başlayabilirsin: oval çerçeve içinde bir kral adı vardır. Hiyeroglif işaretleri binlerle ölçülür, ama günlük yazışmalar için daha sade Hiyeratik ve sonra Demotik yazı kullanılırdı. Hediyelik dükkânlarda adını kartuş içinde hiyeroglifle yazan atölyeler bulabilirsin."
+};
+const GQ={giza:"Giza Pyramids, Egypt",khufu:"Great Pyramid of Giza",sfenks:"Great Sphinx of Giza",saqqara:"Step Pyramid of Djoser, Saqqara",djoser:"Step Pyramid of Djoser, Saqqara",gem:"Grand Egyptian Museum",tutankhamun:"Grand Egyptian Museum",tahrir:"Egyptian Museum, Tahrir Square, Cairo",nmec:"National Museum of Egyptian Civilization, Cairo",kale:"Citadel of Saladin, Cairo",islami:"Khan el-Khalili, Cairo",osmanli:"Muhammad Ali Mosque, Cairo",hatshepsut:"Mortuary Temple of Hatshepsut, Luxor",luxor:"Karnak Temple, Luxor",abusimbel:"Abu Simbel Temples, Egypt",sharm:"Naama Bay, Sharm El Sheikh",ras:"Ras Mohammed National Park",sina:"Mount Sinai, Egypt",oldmarket:"Old Market, Sharm El Sheikh",sahaba:"Al Sahaba Mosque, Sharm El Sheikh",soho:"SOHO Square, Sharm El Sheikh",sharks:"Shark's Bay, Sharm El Sheikh",rasumsid:"Ras Um Sid Lighthouse, Sharm El Sheikh",tiran:"Tiran Island, Egypt"};
+const dir=q=>`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(q)}`;
+const CA={lon0:31.05,lat1:30.08,sx:1212,sy:1400,w:330,h:462,hit:22,r:8},SH={lon0:34.25,lat1:27.99,sx:1766,sy:2000,w:300,h:320,hit:16,r:7};
+const PT={ca:[
+{k:"giza",lat:29.979,lon:31.134,l:"Gize",q:"Giza Pyramids, Egypt",ids:["giza","sfenks","khufu"],a:"start",dx:11,dy:18},
+{k:"gem",lat:29.994,lon:31.119,l:"GEM",q:"Grand Egyptian Museum",ids:["gem","tutankhamun"],a:"start",dx:10,dy:-8},
+{k:"saqqara",lat:29.871,lon:31.216,l:"Sakkara",q:"Step Pyramid of Djoser, Saqqara",ids:["saqqara","djoser"],a:"start",dx:11,dy:5},
+{k:"dahshur",lat:29.79,lon:31.209,l:"Dahşur",q:"Red Pyramid, Dahshur",ids:["saqqara"],a:"start",dx:11,dy:5,t:"Kırık Piramit ve Kızıl Piramit buradadır."},
+{k:"nmec",lat:30.008,lon:31.2305,l:"NMEC",q:"National Museum of Egyptian Civilization, Cairo",ids:["nmec","mumya"],a:"start",dx:11,dy:5},
+{k:"tahrir",lat:30.048,lon:31.234,l:"Tahrir Müzesi",q:"Egyptian Museum, Tahrir Square, Cairo",ids:["tahrir"],a:"end",dx:-11,dy:5},
+{k:"kale",lat:30.029,lon:31.26,l:"Kale",q:"Citadel of Saladin, Cairo",ids:["kale","osmanli"],a:"start",dx:11,dy:5},
+{k:"islami",lat:30.048,lon:31.262,l:"Han el-Halili",q:"Khan el-Khalili, Cairo",ids:["islami"],a:"end",dx:62,dy:-13}],
+sh:[
+{k:"oldmarket",lat:27.857,lon:34.280,l:"Eski Çarşı",q:"Old Market, Sharm El Sheikh",ids:["oldmarket"],a:"start",dx:11,dy:16},
+{k:"sahaba",lat:27.8625,lon:34.2885,l:"Sahaba Camii",q:"Al Sahaba Mosque, Sharm El Sheikh",ids:["sahaba"],a:"start",dx:11,dy:-6},
+{k:"rasumsid",lat:27.848,lon:34.289,l:"Ras Um Sid",q:"Ras Um Sid Lighthouse, Sharm El Sheikh",ids:["rasumsid"],a:"start",dx:11,dy:5},
+{k:"sharm",lat:27.909,lon:34.328,l:"Naama Bay",q:"Naama Bay, Sharm El Sheikh",ids:["sharm"],a:"start",dx:11,dy:5},
+{k:"soho",lat:27.945,lon:34.365,l:"Soho Square",q:"SOHO Square, Sharm El Sheikh",ids:["soho"],a:"end",dx:-11,dy:5},
+{k:"sharks",lat:27.962,lon:34.385,l:"Shark's Bay",q:"Shark's Bay, Sharm El Sheikh",ids:["sharks"],a:"end",dx:-11,dy:5},
+{k:"hava",lat:27.977,lon:34.395,l:"Havalimanı",q:"Sharm El Sheikh International Airport",ids:[],a:"end",dx:-11,dy:5,t:"Sharm el-Şeyh Uluslararası Havalimanı. Otel transferine buradan başlarsın."},
+{k:"ras",off:1,l:"Ras Muhammed",q:"Ras Mohammed National Park",ids:["ras"]},
+{k:"sina",off:1,l:"Sina Dağı",q:"Mount Sinai, Egypt",ids:["sina"],t:"Sharm'dan yaklaşık 2,5-3 saat; genelde gece yola çıkılan gün doğumu turlarıyla gidilir."},
+{k:"tiran",off:1,l:"Tiran Adası",q:"Tiran Island, Egypt",ids:["tiran"]}]};
+const pxy=(M,lat,lon)=>[((lon-M.lon0)*M.sx).toFixed(1),((M.lat1-lat)*M.sy).toFixed(1)];
+const pl=(M,a)=>a.map(p=>pxy(M,p[1],p[0]).join(",")).join(" ");
+const NILC=[[31.36,29.76],[31.34,29.78],[31.28,29.9],[31.24,29.99],[31.225,30.04],[31.23,30.1]];
+const baseCA=`<rect width="330" height="462" fill="var(--card)"/><polyline points="${pl(CA,NILC)}" fill="none" stroke="var(--teal)" stroke-width="9" stroke-linecap="round" opacity=".55"/><text class="sea" x="300" y="285">Nil</text>`;
+const baseSH=`<rect width="300" height="320" fill="var(--sea)"/><polygon points="${pl(SH,[[34.2,27.8],[34.25,27.835],[34.275,27.845],[34.292,27.848],[34.30,27.862],[34.318,27.89],[34.333,27.912],[34.352,27.93],[34.375,27.95],[34.395,27.972],[34.42,27.99],[34.45,28.1],[34.2,28.1]])}" fill="var(--card)" stroke="var(--line)" stroke-width="2"/><text class="sea" x="285" y="215" text-anchor="end">Kızıldeniz</text>`;
+const svgMap=(id,M,pts,base)=>`<svg id="m-${id}" viewBox="0 0 ${M.w} ${M.h}" role="group" aria-label="Harita">${base}${pts.filter(p=>!p.off).map(p=>{const[x,y]=pxy(M,p.lat,p.lon);return `<g class="pt" data-m="${id}" data-k="${p.k}" tabindex="0" role="button" aria-label="${p.l}"><circle class="hit" cx="${x}" cy="${y}" r="${M.hit}"/><circle class="dot" cx="${x}" cy="${y}" r="${M.r}"/><text x="${+x+p.dx}" y="${+y+p.dy}" text-anchor="${p.a}">${p.l}</text></g>`}).join("")}</svg>`;
+function tab(m){$("off").hidden=m!=="sh";$("mw-ca").hidden=m!=="ca";$("mw-sh").hidden=m!=="sh";document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.dataset.t===m))}
+function sel(m,k){const p=(PT[m]||[]).find(x=>x.k===k);if(!p)return;
+document.querySelectorAll(".pt,.offb").forEach(n=>n.classList.toggle("on",n.dataset.m===m&&n.dataset.k===k));
+$("mp").innerHTML=`<h3>${p.l}</h3><p>${p.t||by[p.ids[0]].s}</p>${p.ids.length?`<div class="ch">${p.ids.map(chip).join("")}</div>`:""}<a class="dir" href="${dir(p.q)}" target="_blank" rel="noopener">Yol tarifi (Google Maps)</a>`}
+function locOf(id){for(const m of["ca","sh"]){const p=PT[m].find(x=>x.ids.includes(id));if(p)return[m,p.k]}return null}
+app.addEventListener("click",e=>{const g=e.target.closest(".pt,.offb"),t=e.target.closest(".tabs [data-t]");
+if(g)sel(g.dataset.m,g.dataset.k);else if(t){tab(t.dataset.t);$("mp").textContent="Bir noktaya dokun."}});
+app.addEventListener("keydown",e=>{const g=e.target.closest&&e.target.closest(".pt");if(g&&(e.key==="Enter"||e.key===" ")){e.preventDefault();sel(g.dataset.m,g.dataset.k)}});
+const WT={narmer:"Narmer",djoser:"Pyramid of Djoser",khufu:"Great Pyramid of Giza",hatshepsut:"Mortuary Temple of Hatshepsut",akhenaten:"Akhenaten",tutankhamun:"Tutankhamun",ramses2:"Ramesses II",kleopatra:"Cleopatra",giza:"Giza pyramid complex",sfenks:"Great Sphinx of Giza",saqqara:"Saqqara",gem:"Grand Egyptian Museum",tahrir:"Egyptian Museum",nmec:"National Museum of Egyptian Civilization",kale:"Saladin Citadel of Cairo",islami:"Khan el-Khalili",osmanli:"Mosque of Muhammad Ali",luxor:"Karnak",abusimbel:"Abu Simbel temples",sharm:"Sharm El Sheikh",ras:"Ras Muhammad National Park",sina:"Mount Sinai",sahaba:"Al Sahaba Mosque",tiran:"Tiran Island",tanrilar:"Ancient Egyptian deities",mumya:"Mummy",hiyeroglif:"Rosetta Stone"};
+let IMG={};try{IMG=JSON.parse(localStorage.getItem("misir-img"))||{}}catch(e){}
+async function getImg(id,title){if(IMG[id])return IMG[id];
+const r=await fetch("https://en.wikipedia.org/api/rest_v1/page/summary/"+encodeURIComponent(title.replace(/ /g,"_")));
+if(!r.ok)return null;const j=await r.json(),t=j.thumbnail,o=j.originalimage;if(!t)return null;
+let src=t.source;if(o&&o.width>960)src=src.replace(/\/\d+px-/,"/960px-");else if(o)src=o.source;
+const x={src,page:(j.content_urls&&j.content_urls.desktop&&j.content_urls.desktop.page)||""};IMG[id]=x;try{localStorage.setItem("misir-img",JSON.stringify(IMG))}catch(e){}return x}
+const fig=id=>WT[id]?`<figure class="fig ld" data-id="${id}" data-t="${WT[id]}"></figure>`:"";
+function wire(r){r.querySelectorAll(".fig[data-id]").forEach(f=>{const id=f.dataset.id;getImg(id,f.dataset.t).then(x=>{if(!x)throw 0;const i=new Image();i.alt=f.dataset.n||(by[id]&&by[id].n)||"";i.onload=()=>{f.classList.remove("ld");f.prepend(i);if(x.page){const c=document.createElement("figcaption");c.innerHTML=`Görsel: <a href="${x.page}" target="_blank" rel="noopener">Wikipedia / Wikimedia Commons</a>`;f.append(c)}};i.onerror=()=>f.remove();i.src=x.src}).catch(()=>f.remove())})}
+const KINGS=[
+["Erken ve Eski Krallık",[["MÖ ~3100","Narmer","Mısır'ı birleştiren ilk kral","narmer"],["MÖ ~2670","Djoser","3. Hanedan; mimarı İmhotep ile ilk büyük taş piramidi yaptırdı","djoser"]]],
+["4. Hanedan: Piramit ailesi",[["MÖ ~2613–2589","Sneferu","Hanedanın kurucusu; Dahşur'daki piramitlerin sahibi","saqqara"],["MÖ ~2589–2566","Khufu (Keops)","↳ Sneferu'nun oğlu; Büyük Piramit","khufu"],["MÖ ~2558–2532","Khafre (Kefren)","↳ Khufu'nun oğlu; ikinci piramit ve Sfenks","sfenks"],["MÖ ~2532–2503","Menkaure (Mikerinos)","↳ Khafre'nin oğlu, Khufu'nun torunu; en küçük piramit","giza"]]],
+["18. Hanedan: Hatşepsut'tan Tutankhamon'a",[["MÖ ~1479–1458","Hatşepsut","Thutmose I'in kızı; II. Thutmose'un eşi, sonra kendi firavun","hatshepsut"],["MÖ ~1479–1425","III. Thutmose","↳ Hatşepsut'un üvey oğlu; büyük bir fetih kralı",""],["MÖ ~1391–1353","III. Amenhotep","Akhenaton'un babası; ihtişamlı bir barış dönemi",""],["MÖ ~1353–1336","Akhenaton","↳ III. Amenhotep'in oğlu; eşi Nefertiti","akhenaten"],["MÖ ~1332–1323","Tutankhamon","↳ Muhtemelen Akhenaton'un oğlu; genç yaşta öldü","tutankhamun"]]],
+["19. Hanedan: Ramses'ler",[["MÖ ~1290–1279","I. Seti","Ramses'in babası; Karnak ve Abydos'ta büyük yapılar yaptırdı",""],["MÖ ~1279–1213","II. Ramses","↳ I. Seti'nin oğlu; eşi Nefertari; 66 yıllık saltanat","ramses2"]]],
+["Ptolemaios hanedanı",[["MÖ 305–282","I. Ptolemaios Soter","Büyük İskender'in generali; hanedanın kurucusu","kleopatra"],["MÖ 51–30","VII. Kleopatra","Hanedanın son hükümdarı; Caesar ve Antonius ile ittifak","kleopatra"]]]];
+const FOOD=[
+["Ana yemekler",[
+["Koşari","Pirinç, makarna, mercimek ve nohudun üzerine domates sosu ve çıtır kızarmış soğan konan, Mısır'ın en sevilen halk yemeği.","Ucuz ve doyurucu; kalabalık bir koşari dükkânında denemek en iyisi.","koshari restaurant"],
+["Ful medames","Yavaş pişirilmiş bakla yahnisi; zeytinyağı, limon ve kimyonla yenir. Mısır'da yaygın bir kahvaltı yemeğidir.","Eish baladi (yerel ekmek) ile yenir.","ful medames restaurant"],
+["Molokhiya","Molohiya yapraklarından yapılan koyu yeşil çorbamsı yemek; genelde pilav ve tavuk ya da tavşan ile sunulur.","Dokusu başta tuhaf gelebilir; küçük bir porsiyonla dene.",""],
+["Mahshi","Pirinçli ve otlu harçla doldurulmuş kabak, patlıcan, biber ve yaprak sarma; Türk dolmasına benzer.","Genelde tavuk ya da etle birlikte sunulur.",""],
+["Fattah","Pirinç ve kızarmış ekmeğin üstüne et, sarımsaklı sirke ve domates sosu eklenen şölen yemeği.","Özel günlerde ve bayramlarda hazırlanır.",""],
+["Hawawshi","Baharatlı kıymanın ekmeğe doldurulup fırınlandığı doyurucu bir atıştırmalık.","Sıcakken ye.","hawawshi"],
+["Kebab ve kofta","Izgara et ve baharatlı köfte; Kahire'de yaygındır.","Taze pişenleri ve kalabalık yerleri seç.",""]]],
+["Sokak lezzetleri",[
+["Taameya (Mısır falafeli)","Kahire'de falafel nohutla değil baklayla yapılır; dışı çıtır, içi yeşildir. Ekmeğe domates ve salatayla konur.","Sabah için ideal.","taameya"],
+["Eish baladi","Mısır'ın tam buğdaylı, kabarık yerel ekmeği; neredeyse her öğünle gelir.","Fırından çıkmış hâlini ara.",""],
+["Şeker kamışı suyu (asab)","Taze sıkılan, tatlı ve serinletici bir içecek.","Buz ve hijyen konusunda dikkatli ol; sıkılırken izle.",""]]],
+["Tatlılar",[
+["Basbousa","Şerbetli irmik tatlısı; üzerinde genelde badem ya da hindistan cevizi bulunur.","",""],
+["Umm Ali","Süt, kuruyemiş ve hamurla fırınlanan sıcak servis edilen tatlı; Mısır'ın ulusal tatlısı sayılır.","Soğuk havada özellikle iyi gider.","umm ali dessert"],
+["Kunafa","Tel kadayıf ve peynir ya da kaymaklı şerbetli tatlı; Türkiye'dekine benzer.","Türk künefesiyle karşılaştırmak ilginç olur.","kunafa"],
+["Roz bel laban","Pirinçli sütlaç.","",""]]],
+["İçecekler",[
+["Karkade (hibiskus çayı)","Hibiskus çiçeğinden yapılan kırmızı, ekşimsi çay; sıcak ya da soğuk içilir.","Sıcak günlerde buzlu hâli çok iyi gelir.",""],
+["Mısır çayı","Güçlü siyah çay; genelde bol şekerli ve bazen naneli içilir.","Şekersiz istersen \"bidun sukkar\" de.",""],
+["Limon bi nana","Taze limon ve nane ile yapılan serinletici içecek.","",""]]],
+["Sharm el-Şeyh ve Sina",[
+["Deniz ürünleri","Kızıldeniz balıkları, kalamar ve karides; Eski Çarşı ve liman çevresindeki restoranlarda taze olarak sunulur.","Balığı tartıp fiyatı önceden sor.","seafood restaurant sharm el sheikh"],
+["Bedevi sofrası","Sina Bedevilerinin kömür ateşinde pişirdiği çay, taze ekmek ve et yemekleri.","Çöl turlarında ve gün doğumu turlarında denenebilir.",""]]]];
+const FT={"Koşari": "Koshari", "Ful medames": "Ful medames", "Molokhiya": "Mulukhiyah", "Mahshi": "Mahshi", "Fattah": "Fatteh", "Hawawshi": "Hawawshi", "Kebab ve kofta": "Kofta", "Taameya (Mısır falafeli)": "Falafel", "Eish baladi": "Eish baladi", "Şeker kamışı suyu (asab)": "Sugarcane juice", "Basbousa": "Basbousa", "Umm Ali": "Umm Ali", "Kunafa": "Kunafa", "Roz bel laban": "Rice pudding", "Karkade (hibiskus çayı)": "Hibiscus tea", "Limon bi nana": "Limonana", "Bedevi sofrası": "Bedouin"};
+const FTIPS=["Musluk suyu içme; şişe su kullan ve buzlu içeceklerde dikkatli ol.","Kalabalık, yemeği taze ve sıcak servis eden yerleri seç.","Mısır Müslüman bir ülke; domuz eti yok, alkol ise çoğunlukla otel ve turistik mekânlarda bulunur.","Ramazan'da gündüz bazı yerler kapalı olabilir; akşam iftar saatinde çok kalabalıklaşır."];
+function kings(){app.innerHTML=`<a class="back" href="#">‹ Ana sayfa</a><h2>Krallar ve soy ağacı</h2><p>Kronolojik sıralı seçme krallar. ↳ işaretli olanlar bir önceki kralla aile bağı olanlardır. Aralarında başka krallar da vardır; liste yalnızca gezinde karşılaşacağın isimleri gösterir. Tarihler yaklaşık ve kaynağa göre birkaç yıl farklı olabilir.</p>`+KINGS.map(g=>`<h3 class="famh">${g[0]}</h3><div class="tl">${g[1].map(n=>`<div class="era"><time>${n[0]}</time><h3>${n[3]&&by[n[3]]?`<a href="#${n[3]}">${n[1]}</a>`:n[1]}</h3><p>${n[2]}</p></div>`).join("")}</div>`).join("")}
+function food(){app.innerHTML=`<a class="back" href="#">‹ Ana sayfa</a><h2>Yemek rehberi</h2><div class="tip"><b>Genel notlar</b><ul>${FTIPS.map(t=>`<li>${t}</li>`).join("")}</ul></div>`+FOOD.map(g=>`<h3 class="famh">${g[0]}</h3>${g[1].map(f=>`<div class="fd">${FT[f[0]]?`<figure class="fig ld" data-id="food:${f[0]}" data-t="${FT[f[0]]}" data-n="${f[0]}"></figure>`:""}<b>${f[0]}</b><p>${f[1]}</p>${f[2]?`<small>${f[2]}</small>`:""}${f[3]?`<div><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(f[3])}" target="_blank" rel="noopener">Yakınımda ara (Google Maps)</a></div>`:""}</div>`).join("")}`).join("");wire(app)}
+let RATES=null,FAIL=false;const KS={rev:false},CK="misir-kur";
+const tr2=n=>n.toLocaleString("tr-TR",{maximumFractionDigits:2});
+async function fetchRates(){
+const j=async u=>(await fetch(u)).json();
+const src=[async()=>{const x=await j("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/try.json");return{d:x.date,t:x.try}},
+async()=>{const x=await j("https://latest.currency-api.pages.dev/v1/currencies/try.json");return{d:x.date,t:x.try}},
+async()=>{const x=await j("https://open.er-api.com/v6/latest/TRY");return{d:(x.time_last_update_utc||"").slice(5,16),t:{egp:x.rates.EGP,usd:x.rates.USD,eur:x.rates.EUR}}}];
+for(const f of src){try{const x=await f();if(x.t&&x.t.egp&&x.t.usd&&x.t.eur){RATES={d:x.d,t:x.t,live:true};try{localStorage.setItem(CK,JSON.stringify(RATES))}catch(e){}return}}catch(e){}}
+try{const c=JSON.parse(localStorage.getItem(CK));if(c&&c.t)RATES=Object.assign(c,{live:false})}catch(e){}
+FAIL=!RATES}
+function renderConv(){const o=$("ko");if(!o)return;const c=$("kc").value,C=c.toUpperCase(),a=parseFloat($("ka").value)||0;
+$("kr").textContent=KS.rev?`Yön: TL → ${C} (değiştir)`:`Yön: ${C} → TL (değiştir)`;
+if(!RATES){o.textContent=FAIL?"Kur alınamadı":"Kur alınıyor…";$("kt").textContent=FAIL?"İnternete bağlıyken tekrar dene.":"";return}
+const tl=1/RATES.t[c];
+o.textContent=KS.rev?`${tr2(a)} ₺ = ${tr2(a/tl)} ${C}`:`${tr2(a)} ${C} = ${tr2(a*tl)} ₺`;
+$("kt").textContent=`1 ${C} = ${tr2(tl)} ₺ · ${RATES.live?"Güncel":"Kayıtlı (çevrimdışı)"} kur, ${RATES.d||""}. Piyasa kuru; banka ve döviz bürosu kuru farklı olabilir.`}
+function initConv(){["ka","kc"].forEach(i=>$(i).addEventListener("input",renderConv));$("kr").onclick=()=>{KS.rev=!KS.rev;renderConv()};renderConv()}
+function home(){
+const pops=["giza","tutankhamun","ramses2","gem","sfenks","sina"].map(i=>by[i]);
+const B=[["zaman","Zaman çizelgesi","MÖ 3100'den bugüne büyük dönemler."],["harita","Harita","Kahire, Gize ve Sharm noktaları, yol tarifleri."],["rota","Gezi rotası","Şehre göre gezilecek yerler."],["krallar","Krallar ve soy ağacı","Kronolojik sıra ve aile bağları."],["yemek","Yemek rehberi","Ne yenir, ne içilir, fotoğraflarıyla."],["kur","Kur hesaplama","Mısır Lirası, Dolar ve Euro'yu TL'ye çevir."]];
+app.innerHTML=`<h2>Popüler</h2><div class="pop">${pops.map(e=>`<a class="pc" href="#${e.id}">${fig(e.id)}<small>${e.t} · ${e.d}</small><h3>${e.n}</h3><p>${e.s}</p></a>`).join("")}</div>
+<h2>Bölümler</h2><div class="pop">${B.map(x=>`<a class="pc" href="#${x[0]}"><h3>${x[1]}</h3><p>${x[2]}</p></a>`).join("")}</div>`;wire(app);
+}
+const pg=(t,b)=>`<a class="back" href="#">‹ Ana sayfa</a><h2>${t}</h2>`+b;
+function pageMap(p){app.innerHTML=pg("Harita",`<div class="tabs"><button data-t="ca" class="on">Kahire & Gize</button><button data-t="sh">Sharm el-Şeyh</button></div>
+<div id="mw-ca">${svgMap("ca",CA,PT.ca,baseCA)}</div><div id="mw-sh" hidden>${svgMap("sh",SH,PT.sh,baseSH)}</div><div id="off" hidden><div class="offl">Şehir dışı (haritada yok):</div><div class="ch">${PT.sh.filter(p=>p.off).map(p=>`<button class="offb" data-m="sh" data-k="${p.k}">${p.l}</button>`).join("")}</div></div>
+<div id="mp" class="tip">Bir noktaya dokun; o bölgedeki yerleri ve ilgili konuları görürsün. Harita şematiktir, konumlar yaklaşıktır.</div>
+`);if(p&&p[1]){tab(p[1]);sel(p[1],p[2])}}
+function pageTl(){app.innerHTML=pg("Zaman çizelgesi",`<div class="tl">${E.map(e=>`<div class="era"><time>${e[1]}</time><h3>${e[0]}</h3><p>${e[2]}</p><div class="ch">${e[3].map(chip).join("")}</div></div>`).join("")}</div>
+`)}
+function pageRota(){app.innerHTML=pg("Gezi rotası",`
+${[["Kahire",["gem","tahrir","nmec","kale","islami"]],["Gize ve çevresi",["giza","sfenks","saqqara"]],["Sharm el-Şeyh",["sharm","oldmarket","sahaba","soho","sharks","rasumsid","tiran","ras","sina"]],["Gün gezisi fikirleri",["luxor","abusimbel"]],["Önce bilmen gerekenler",["tanrilar","mumya","hiyeroglif"]]].map(c=>`<div class="city"><h3>${c[0]}</h3><div class="ch">${c[1].map(chip).join("")}</div></div>`).join("")}`)}
+function pageKur(){app.innerHTML=pg("Hızlı kur hesaplama",`<div class="kur"><div class="krow"><input id="ka" type="number" inputmode="decimal" min="0" value="100" aria-label="Tutar"><select id="kc" aria-label="Para birimi"><option value="egp">Mısır Lirası (EGP)</option><option value="usd">Dolar (USD)</option><option value="eur">Euro (EUR)</option></select></div><button id="kr" class="zoom"></button><div id="ko" class="kout">Kur alınıyor…</div><div id="kt" class="kmeta"></div></div>`);initConv()}
+function ent(e){
+const rel=new Set(e.r);D.forEach(x=>{if(x.r.includes(e.id))rel.add(x.id)});rel.delete(e.id);const L=locOf(e.id);
+app.innerHTML=`<a class="back" href="#">‹ Ana sayfa</a><article class="ent"><h2>${e.n}</h2><div class="meta">${e.t} · ${e.d}</div>${fig(e.id)}
+<p class="lead">${e.s}</p>${G[e.id]?`<p>${G[e.id]}</p>`:""}${H[e.id]?`<p>${H[e.id]}</p>`:""}<ul>${e.f.map(f=>`<li>${f}</li>`).join("")}</ul>
+<div class="tip"><b>Gezi notu:</b> ${e.tip}</div><div class="btns">${GQ[e.id]?`<a class="mapbtn" href="${dir(GQ[e.id])}" target="_blank" rel="noopener">Yol tarifi (Google Maps)</a>`:""}${L?`<a class="mapbtn" href="#harita:${L[0]}:${L[1]}">Haritada göster</a>`:""}</div><h3>İlişkili</h3><div class="ch" style="margin-top:8px">${[...rel].map(chip).join("")}</div></article>`;wire(app);
+}
+function search(v){
+const k=nz(v.trim());if(!k){home();return}
+const sc=D.map(e=>{let s=0;if(nz(e.n).includes(k))s=3;else if(nz(e.a).includes(k))s=2;else if(nz(e.s+e.f.join(" ")+e.tip+(G[e.id]||"")).includes(k))s=1;return[e,s]}).filter(x=>x[1]).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
+const fm=FOOD.flatMap(g=>g[1]).filter(f=>nz(f[0]+" "+f[1]).includes(k));
+if(!sc.length&&!fm.length){app.innerHTML=`<h2>Sonuç yok</h2><p>"${v}" için kayıt bulunamadı. Başka bir isim dene: Ramses, Gize, Sina, koşari…</p>`;return}
+const top=sc[0],rel=top?[...new Set([...top.r,...D.filter(x=>x.r.includes(top.id)).map(x=>x.id)])].filter(i=>i!==top.id):[];
+app.innerHTML=`<h2>${sc.length+fm.length} sonuç</h2>`+sc.map(e=>`<a class="res" href="#${e.id}"><b>${e.n}</b> <span>${e.t} · ${e.d}</span><br>${e.s}</a>`).join("")+fm.map(f=>`<a class="res" href="#yemek"><b>${f[0]}</b> <span>Yemek rehberi</span><br>${f[1]}</a>`).join("")+(rel.length?`<h3>${top.n} ile ilişkili</h3><div class="ch" style="margin-top:8px">${rel.map(chip).join("")}</div>`:"");
+}
+let cur=null;
+function route(h){const p=h.split(":"),P={zaman:pageTl,tl:pageTl,rota:pageRota,kur:pageKur,krallar:kings,yemek:food};
+if(p[0]==="harita"){pageMap(p);scrollTo(0,0);return}
+if(P[h]){P[h]();scrollTo(0,0);return}
+if(by[h]){ent(by[h]);scrollTo(0,0);return}
+search(q.value)}
+function nav(h){if(h===cur)return;cur=h;route(h)}
+function go(h){cur=h;try{history.pushState(null,"","#"+h)}catch(e){}route(h)}
+function clr(){cur="";try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}}
+document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;e.preventDefault();go(a.getAttribute("href").slice(1))});
+q.addEventListener("input",()=>{if(cur)clr();search(q.value)});
+$("x").onclick=()=>{q.value="";clr();home()};
+addEventListener("hashchange",()=>nav(location.hash.slice(1)));addEventListener("popstate",()=>nav(location.hash.slice(1)));
+fetchRates().then(renderConv);nav(location.hash.slice(1));
+</script>
+</body>
+</html>
